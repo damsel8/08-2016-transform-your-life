@@ -123,6 +123,7 @@ var switchCase = function(sentence, myCase){
 
 console.log(switchCase(bestSentence, 'lower'));
 console.log(switchCase(bestSentence, 'upper'));
+//this is a test
 // 11. contentsCollector
 
 // 13. makeArray
