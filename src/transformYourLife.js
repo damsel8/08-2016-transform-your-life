@@ -143,6 +143,17 @@ var contentsCollector = function (myObject, specifier){
 
 console.log(contentsCollector(person));
 // 13. makeArray
+var makeArray = function (number){
+  var emptyArray = [0];
+
+  emptyArray.length = number + 1;
+  loop (emptyArray, function(element, index){
+    
+    emptyArray.push;
+  }) 
+}
+console.log (makeArray(3));
+
 
 // 14. makeRow
 
