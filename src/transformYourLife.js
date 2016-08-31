@@ -63,16 +63,66 @@ var multByThree = function (collection){
 }
 
 console.log (multByThree(numbers));
+
 // 6. upperCase
+var upperCase = function(myString){
+  var upperArray = transform(myString, function(letter){
+    return letter.toUpperCase();
+  });
+  return upperArray.join('');
+};
+
+console.log(upperCase("Welcome World"));
 
 // 7. contentsCollection
+var contentsCollection = function(myObject){
+  return transform(myObject, function(
+    value, key){
+    return [key,value];
+  });
+}
+var person = {name: 'Jon', greatestFear: 'fearItself'};
+console.log(contentsCollection(person));
 
 // 8. multByWhatever
+var numbers =[1,2,3,4,5];
+var multByWhatever = function(collection, inputNum){
+  return transform(collection, function(number){
+    return number * inputNum;
+  });
+};
+
+console.log(multByWhatever(numbers, 2));
 
 // 9. divideByWhatever
+var divideByWhatever = function(collection, inputNum){
+  return transform(collection, function(number){
+    return number/inputNum;
+  });
+};
+
+console.log(divideByWhatever(numbers, 2));
 
 // 10. switchCase
+var bestSentence="This is the best six week course ever!";
+var switchCase = function(sentence, myCase){
+  if (myCase === 'lower'){
+    var lowerArray= transform(sentence, function(letter){
+      return letter.toLowerCase();
+    });
+    return lowerArray.join('');
+  }
+  else if (myCase === 'upper'){
+    var upperArray = transform(sentence, function(
+      letter){
+      return letter.toUpperCase();
+    });
+    return upperArray.join('');
+  };
+};
 
+console.log(switchCase(bestSentence, 'lower'));
+console.log(switchCase(bestSentence, 'upper'));
 // 11. contentsCollector
 
 // 13. makeArray
