@@ -125,7 +125,23 @@ console.log(switchCase(bestSentence, 'lower'));
 console.log(switchCase(bestSentence, 'upper'));
 //this is a test
 // 11. contentsCollector
+var contentsCollector = function (myObject, specifier){
+  if (specifier === "keys"){
+    return transform (myObject, function(value, key){
+      return key; 
+    })
+  } else if (specifier === "values") {
+    return transform (myObject, function(value){
+      return value;
+    })
+  } else {
+    return transform (myObject, function(value, key){
+        return [key, value];
+    })
+  }
+}
 
+console.log(contentsCollector(person));
 // 13. makeArray
 
 // 14. makeRow
